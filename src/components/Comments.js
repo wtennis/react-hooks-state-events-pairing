@@ -1,10 +1,13 @@
-import {useState} from "react"
+import {useState} from "react";
+import CommentLikeButton from "./CommentLikeButton";
+
 function Comments({comments}) {
     const commentList = comments.map((commentObj)=> {
         return (
             <>
             <strong>{commentObj.user}</strong>
             <p>{commentObj.comment}</p>
+            <CommentLikeButton />
             </>
         )
     })
