@@ -15,9 +15,8 @@ function App() {
         allowfullscreen
         title="Thinking in React"
       />
-
-      <VideoInfo />
-      <Comments />
+      <VideoInfo title = {video.title} uploadDate = {video.createdAt} views = {video.views}/>
+      <Comments comments = {video.comments} />
     </div>
   );
 }
