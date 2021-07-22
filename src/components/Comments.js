@@ -1,4 +1,3 @@
-// import CommentsButton from "./CommentsButton"
 import {useState} from "react"
 function Comments({comments}) {
     const commentList = comments.map((commentObj)=> {
