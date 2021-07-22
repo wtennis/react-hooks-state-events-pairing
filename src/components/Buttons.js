@@ -1,8 +1,10 @@
-function Buttons() {
+function Buttons({ upVotes, downVotes }) {
 return (
     <>
-    <p>This is a button</p>
-    <hr></hr>    
+    <span>
+        <button>{`👍 ${upVotes}`}</button>
+        <button>{`👎 ${downVotes}`}</button>
+    </span>
     </>
 )
 }

@@ -1,3 +1,5 @@
+// import CommentsButton from "./CommentsButton"
+import {useState} from "react"
 function Comments({comments}) {
     const commentList = comments.map((commentObj)=> {
         return (
@@ -7,10 +9,18 @@ function Comments({comments}) {
             </>
         )
     })
+
+    const [showComment, setComment] = useState(true)
+    function showComments(){
+        setComment(!showComment)
+    }
+
     return (
        <>
-        <h2>{`${comments.length} Comments`}</h2>
-        {commentList}
+        <br></br>
+        <button onClick = {showComments}>{showComment ? "Hide Comments" : "Show Comments"}</button>
+        <hr></hr>
+        {showComment ? <><h2>{`${comments.length} Comments`}</h2>{commentList}</> : null }
         </>
     )
 }

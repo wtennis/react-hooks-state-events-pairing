@@ -1,12 +1,12 @@
 import Buttons from "./Buttons";
 
-function VideoInfo({title, views, uploadDate}) {
+function VideoInfo({title, views, uploadDate, videoInfo}) {
     return (
         <>
         <h2>{title}</h2>
         <p>{views} Views | Uploaded {uploadDate}</p>
 
-        <Buttons />
+        <Buttons upVotes = {videoInfo.upvotes} downVotes = {videoInfo.downvotes}/>
         </>
     )
 }
